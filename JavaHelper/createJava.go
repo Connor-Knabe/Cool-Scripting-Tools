@@ -1,7 +1,7 @@
 package main
 
 import "os"
-import "os/exec"
+//import "os/exec"
 import "fmt"
 
 
@@ -11,9 +11,8 @@ func main() {
     fName = os.Args[1]
 
     if _, err := os.Stat(fName); err == nil {
-    	fmt.Println(fName, "exist!")
-
-    	cmd := exec.Command("echo", "-n", `{"Name": "Bob", "Age": 32}`)
+	 
+		fmt.Printf("HIII")
 
 }
 

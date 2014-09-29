@@ -7,14 +7,16 @@ import "fmt"
 
 func main() {
 
-    fName := "";
-    fName = os.Args[1]
 
-    if _, err := os.Stat(fName); err == nil {
-	 
-		fmt.Printf("HIII")
 
-}
+	if (len(os.Args)<1){
+		fmt.Printf("No arguments!");
+	} else {
+		fmt.Printf("Ok")
+	}
+
+
+
 
 
 }

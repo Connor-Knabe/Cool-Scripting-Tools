@@ -1,14 +1,22 @@
+package main
+
 import "os"
-import "exec"
+import "os/exec"
 import "fmt"
 
-fName := "";
-fName = os.Args[1]
 
-if _, err := os.Stat(fName); err == nil {
-	fmt.Println(file, "exist!")
+func main() {
 
-	cmd := exec.Command("echo", "-n", `{"Name": "Bob", "Age": 32}`)
-	stdout, err := cmd.StdoutPipe()
+    fName := "";
+    fName = os.Args[1]
+
+    if _, err := os.Stat(fName); err == nil {
+    	fmt.Println(fName, "exist!")
+
+    	cmd := exec.Command("echo", "-n", `{"Name": "Bob", "Age": 32}`)
+    	stdout, err := cmd.StdoutPipe()
+
+}
+
 
 }

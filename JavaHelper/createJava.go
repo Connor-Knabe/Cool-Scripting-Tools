@@ -7,10 +7,8 @@ import "fmt"
 
 func main() {
 
-
-
-	if (len(os.Args)<1){
-		fmt.Printf("No arguments!");
+	if (len(os.Args)<2){
+		fmt.Printf("You need one argument!");
 	} else {
 		fmt.Printf("Ok")
 	}

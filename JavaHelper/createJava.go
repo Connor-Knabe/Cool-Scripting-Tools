@@ -32,7 +32,7 @@ func main() {
 			cmd.Stdin = os.Stdin
 			cmd.Start()
 			//cmd.Wait()
-			fmt.Printf("Java console output below:\n");
+			fmt.Printf("Java console output below:\n\n");
 			cmd = exec.Command("java", os.Args[1])
 			cmd.Stdout = os.Stdout
 			cmd.Start()

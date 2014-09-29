@@ -14,8 +14,8 @@ func main() {
 		if err != nil {
 		    // no such file or dir
 			fmt.Printf("File not found")
-			w, err := os.Create(os.Args[1])
-			n, err := io.WriteString(w, "blahblahblah")
+			newJavaFile, err := os.Create(os.Args[1]+".java")
+			n, err := io.WriteString(newJavaFile, "public class " + os.Args[1] + " {\n    public static void main(String[] args) {\n        \n        \n    }\n}")
 			    if err != nil {
 			        fmt.Println(n, err)
 			    }

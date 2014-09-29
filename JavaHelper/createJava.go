@@ -14,7 +14,6 @@ func main() {
     	fmt.Println(fName, "exist!")
 
     	cmd := exec.Command("echo", "-n", `{"Name": "Bob", "Age": 32}`)
-    	stdout, err := cmd.StdoutPipe()
 
 }
 

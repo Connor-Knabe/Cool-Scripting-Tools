@@ -8,7 +8,7 @@ if(len(sys.argv)<2):
 	sys.exit(0)
 fName = sys.argv[1]
 
-
+def compile():
 
 if(os.path.isfile(fName+".java")):
     print ("Compiling")

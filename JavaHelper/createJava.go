@@ -26,27 +26,19 @@ func main() {
 			fmt.Printf("Compiling and running file\n")
 			cmd := exec.Command("javac", fName)
 			fName = os.Args[1]
-
 			cmd.Stdout = os.Stdout
 			cmd.Stderr = os.Stderr
 			cmd.Stdin = os.Stdin
 			cmd.Start()
-			//cmd.Wait()
 			fmt.Printf("Java console output below:\n\n");
 			cmd = exec.Command("java", os.Args[1])
 			cmd.Stdout = os.Stdout
+			cmd.Stderr = os.Stderr
+			cmd.Stdin = os.Stdin
 			cmd.Start()
 			cmd.Wait()
-			fmt.Printf("Done")
-
-
 		}
-
-
 	}
-
-
-
-
-
 }
+
+

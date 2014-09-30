@@ -8,18 +8,16 @@ if(len(sys.argv)<2):
 	sys.exit(0)
 fName = sys.argv[1]
 
-def compile():
-
-if(os.path.isfile(fName+".java")):
-    print ("Compiling")
-    subprocess.call("javac " + fName +".java", shell=True)
-    print ("Output below\n")
-    subprocess.call("java " + fName +" ", shell=True)
-else if (os.path.isfile(fName)):
+def compile(fName):
     print ("Compiling")
     subprocess.call("javac " + fName, shell=True)
     print ("Output below\n")
-    subprocess.call("java " + fName +" ", shell=True)
+    subprocess.call("java " + filename.split('.java')[0] +" ", shell=True)
+
+if(os.path.isfile(fName+".java")):
+	compile(fName+".java")
+elif (os.path.isfile(fName)):
+	compile(fName)
 else:
     print ("New file created")
     file = open(fName + ".java", 'w+')

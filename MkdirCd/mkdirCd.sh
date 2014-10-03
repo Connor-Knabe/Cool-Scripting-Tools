@@ -5,5 +5,4 @@ if [ -z "$1" ];then
 	exit
 fi
 mkdir $1
-dirpath=$1
-cd $dirpath
+cd $1

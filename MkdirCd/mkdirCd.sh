@@ -6,4 +6,5 @@ fi
 mkdir $1
 echo "Made"
 echo "HII"
-. cd $1
+dirpath=$1
+cd $dirpath

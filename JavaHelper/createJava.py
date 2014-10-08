@@ -14,10 +14,8 @@ def main():
 		compile(fName+".java")
 	elif (os.path.isfile(fName)):
 		compile(fName)
-	# Needs to be implemented
-	elif (os.path.isFile(fName+"java")):
-		print (fName+"java")
-		#compile(fName+"java")
+	elif (os.path.isfile(fName+"java")):
+		compile(fName+"java")
 	else:
 	    print ("New file created")
 	    file = open(fName + ".java", 'w+')

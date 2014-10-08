@@ -14,12 +14,13 @@ def main():
 		compile(fName+".java")
 	elif (os.path.isfile(fName)):
 		compile(fName)
+	elif (os.path.isFile(fName+".")):
+		compile(fName+"java");
 	else:
 	    print ("New file created")
 	    file = open(fName + ".java", 'w+')
 	    file.write("public class " + fName + " {\n    public static void main(String[] args) {\n        \n        \n    }\n}")
 	    subprocess.call("open " + fName+ ".java", shell=True)
-
 
 def compile(fName):
     print ("Compiling")

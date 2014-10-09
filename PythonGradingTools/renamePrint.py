@@ -15,6 +15,7 @@ if (os.path.isdir("TextDocs")):
 	print "TextDocs folder already exists"
 else:
 	os.mkdir("TextDocs")
+
 if (os.path.isdir("Zips")):
 	print "Zips folder already exists"
 else:
@@ -23,18 +24,21 @@ else:
 #Loops through all files changing the name to pwprt.php
 #Also adds the pwprt to an array
 for filename in os.listdir("."):
-	if filename.startswith("Lab ") and "php" in filename:
-		pwprtName = filename.split('_')[1]+".php"
-		os.rename(filename, pwprtName)
-		pwprtArry.append(pwprtName.split(".")[0])
-	elif ("sql" in filename):
+
+	if ("sql" in filename):
 		pwprtName = filename.split('_')[1]+".sql"
 		os.rename(filename, pwprtName)
 		pwprtArry.append(pwprtName.split(".")[0])
-	elif("txt" in filename and not "Grades.txt" in filename):
-		shutil.move(filename,"TextDocs")
-	elif("zip" in filename and not "Grades.txt" in filename):		
-		shutil.move(filename,"Zips")
+		
+	#if filename.startswith("Lab ") and "php" in filename:
+		pwprtName = filename.split('_')[1]+".php"
+		os.rename(filename, pwprtName)
+		pwprtArry.append(pwprtName.split(".")[0])
+	
+	#elif("txt" in filename and not "Grades.txt" in filename):
+	#	shutil.move(filename,"TextDocs")
+	#elif("zip" in filename):		
+	#	shutil.move(filename,"Zips")
 
 
 

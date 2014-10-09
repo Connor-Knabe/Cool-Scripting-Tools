@@ -33,7 +33,7 @@ for filename in os.listdir("."):
 		pwprtArry.append(pwprtName.split(".")[0])
 	elif("txt" in filename and not "Grades.txt" in filename):
 		shutil.move(filename,"TextDocs")
-	else:		
+	elif("zip" in filename and not "Grades.txt" in filename):		
 		shutil.move(filename,"Zips")
 
 

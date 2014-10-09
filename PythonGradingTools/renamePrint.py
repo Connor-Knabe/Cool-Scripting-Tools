@@ -15,6 +15,10 @@ if (os.path.isdir("TextDocs")):
 	print "TextDocs folder already exists"
 else:
 	os.mkdir("TextDocs")
+if (os.path.isdir("Zips")):
+	print "Zips folder already exists"
+else:
+	os.mkdir("Zips")
 
 #Loops through all files changing the name to pwprt.php
 #Also adds the pwprt to an array
@@ -29,6 +33,9 @@ for filename in os.listdir("."):
 		pwprtArry.append(pwprtName.split(".")[0])
 	elif("txt" in filename and not "Grades.txt" in filename):
 		shutil.move(filename,"TextDocs")
+	else:		
+		shutil.move(filename,"Zips")
+
 
 
 #Sorts array and prints to Grades file

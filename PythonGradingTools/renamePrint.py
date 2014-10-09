@@ -24,7 +24,7 @@ for filename in os.listdir("."):
 		os.rename(filename, pwprtName)
 		pwprtArry.append(pwprtName.split(".")[0])
 	elif ("sql" in filename):
-		pwprtName = filename.split('_')[1]+".php"
+		pwprtName = filename.split('_')[1]+".sql"
 		os.rename(filename, pwprtName)
 		pwprtArry.append(pwprtName.split(".")[0])
 	elif("txt" in filename and not "Grades.txt" in filename):

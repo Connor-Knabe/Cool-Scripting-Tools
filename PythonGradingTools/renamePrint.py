@@ -23,6 +23,10 @@ for filename in os.listdir("."):
 		pwprtName = filename.split('_')[1]+".php"
 		os.rename(filename, pwprtName)
 		pwprtArry.append(pwprtName.split(".")[0])
+	elif ("sql" in filename):
+		pwprtName = filename.split('_')[1]+".php"
+		os.rename(filename, pwprtName)
+		pwprtArry.append(pwprtName.split(".")[0])
 	elif("txt" in filename and not "Grades.txt" in filename):
 		shutil.move(filename,"TextDocs")
 

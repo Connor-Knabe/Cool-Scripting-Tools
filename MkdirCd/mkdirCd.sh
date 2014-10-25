@@ -1,7 +1,7 @@
 #!/bin/bash
 #Usage: make an alias = ". /mkdirCd.sh"
 
-openFlag = false
+openFlag=false;
 
 while getopts :o: option
 do
@@ -17,6 +17,6 @@ fi
 mkdir $1
 cd $1
 
-if ["$openFlag" = true]; then
+if $openFlag = true ; then
 	jcc $1
 fi 

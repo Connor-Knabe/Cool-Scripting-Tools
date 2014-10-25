@@ -2,12 +2,14 @@
 #Usage: make an alias = ". /mkdirCd.sh"
 
 openFlag=false;
+echo "Test"
 
-while getopts :o: option
+while getopts ":o" option
 do
 	case "$option" in
     o) 
-        openFlag = true
+        echo "TRUE"
+        #openFlag = true
         ;;
     *)
         echo "Something went wrong"
@@ -26,11 +28,10 @@ if [ "$openFlag" ] ; then
     echo 'Is true'
     mkdir $1
     cd $1
+    jcc $1
+
 else 
     echo 'Is false'
+    mkdir $1
+    cd $1
 fi
-
-
-if $openFlag ; then
-	jcc $1
-fi 

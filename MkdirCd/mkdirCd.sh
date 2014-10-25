@@ -3,13 +3,14 @@
 
 openFlag=false;
 echo "Test"
+echo $openFlag
 
-while getopts ":o" option
-do
+while getopts ":o:" option; do
+
 	case "$option" in
     o) 
         echo "TRUE"
-        #openFlag = true
+        openFlag = true
         ;;
     *)
         echo "Something went wrong"
@@ -23,12 +24,16 @@ if [ -z "$1" ];then
 	exit
 fi
 
+echo "Dir Name: " + $2
 
-if [ "$openFlag" ] ; then 
+echo $openFlag
+
+if [ "$openFlag" = true ] ; then 
     echo 'Is true'
-    mkdir $1
-    cd $1
-    jcc $1
+    echo $openFlag
+    mkdir $2
+    cd $2
+    jcc $2
 
 else 
     echo 'Is false'

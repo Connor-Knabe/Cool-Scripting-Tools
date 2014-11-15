@@ -42,7 +42,7 @@ for filename in os.listdir("."):
 #Sorts array and prints to Grades file
 pwprtArry.sort()
 for j in range (len(pwprtArry)):
-    outFile.write(pwprtArry[j] + " -" + "\n")
+    outFile.write(pwprtArry[j] + " -" + "\n\n")
 
 
 
